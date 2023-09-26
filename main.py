@@ -33,7 +33,7 @@ def modulus(a, b):
 
 def main():
     parser = argparse.ArgumentParser(description="Perform arithmetic operations.")
-    parser.add_argument("operation", type=str, choices=["add", "subtract", "multiply", "divide"],
+    parser.add_argument("operation", type=str, choices=["add", "subtract", "multiply", "divide", "modulus"],
                         help="The arithmetic operation to perform.")
     parser.add_argument("a", type=float, help="First number")
     parser.add_argument("b", type=float, help="Second number")
@@ -48,6 +48,8 @@ def main():
         result = multiply(args.a, args.b)
     elif args.operation == "divide":
         result = divide(args.a, args.b)
+    elif args.operation == "modulus":
+        result = modulus(args.a, args.b)
 
     print(f"Result (main branch): {args.a} {args.operation} {args.b} = {result}")
 
