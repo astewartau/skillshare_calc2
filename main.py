@@ -15,12 +15,12 @@ def multiply(a, b):
 
 def divide(a, b):
     if b == 0:
-        return "Division by zero is not allowed."
+        return "Division by zero is not allowed!"
     return a / b
 
 def factorial(a):
     if a < 0:
-        return "Factorial of negative numbers is not allowed."
+        return "Factorial of negative numbers is not allowed!"
     elif a == 0:
         return 1
     else:
