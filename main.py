@@ -16,6 +16,14 @@ def divide(a, b):
         return "Division by zero is not allowed!"
     return a / b
 
+def factorial(a):
+    if a < 0:
+        return "Factorial of negative numbers is not allowed!"
+    elif a == 0:
+        return 1
+    else:
+        return a * factorial(a - 1)
+
 def main():
     parser = argparse.ArgumentParser(description="Perform arithmetic operations.")
     parser.add_argument("operation", type=str, choices=["add", "subtract", "multiply", "divide"],
@@ -34,7 +42,7 @@ def main():
     elif args.operation == "divide":
         result = divide(args.a, args.b)
 
-    print(f"Result of {args.a} {args.operation} {args.b} = {result}")
+    print(f"Result (feature branch): {args.a} {args.operation} {args.b} = {result}")
 
 if __name__ == "__main__":
     main()
