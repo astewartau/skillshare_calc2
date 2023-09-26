@@ -26,6 +26,11 @@ def factorial(a):
     else:
         return a * factorial(a - 1)
 
+def modulus(a, b):
+    if b == 0:
+        return "Modulus by zero is not allowed!"
+    return a % b
+
 def main():
     parser = argparse.ArgumentParser(description="Perform arithmetic operations.")
     parser.add_argument("operation", type=str, choices=["add", "subtract", "multiply", "divide"],
